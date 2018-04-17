@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Flname:</strong>
+  <%= @order.FLName %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @order.phone %>
+</p>
+
+<p>
+  <strong>Descriptioncargo:</strong>
+  <%= @order.DescriptionCargo %>
+</p>
+
+<p>
+  <strong>Pointa:</strong>
+  <%= @order.PointA %>
+</p>
+
+<p>
+  <strong>Pointb:</strong>
+  <%= @order.PointB %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

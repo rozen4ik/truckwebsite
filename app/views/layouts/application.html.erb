@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <%= link_to  "Главная", root_path %>
+    <%= link_to  "О нас", about_index_path %>
+    <%= link_to  "Контакты", contact_index_path %>
+    <%= link_to  "Сделать заказ", orders_path %>
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  FLName: MyString
+  phone: 1
+  DescriptionCargo: MyText
+  PointA: MyString
+  PointB: MyString
+
+two:
+  FLName: MyString
+  phone: 1
+  DescriptionCargo: MyText
+  PointA: MyString
+  PointB: MyString
