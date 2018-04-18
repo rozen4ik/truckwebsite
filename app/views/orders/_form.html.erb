@@ -10,33 +10,58 @@
       </ul>
     </div>
   <% end %>
+  
+  <br>
+  
+  <div class="container">
+      <div class="form-group">
+        <%= form.label :FLName, value: 'Как вас зовут?'%>
+        <div class="row">
+          <div class="col-6">
+            <%= form.text_field :FLName, class: 'form-control' %>
+          </div>  
+        </div>
+      </div>
 
-  <div class="field">
-    <%= form.label :FLName %>
-    <%= form.text_field :FLName %>
-  </div>
+      <div class="form-group">
+        <%= form.label :phone, value: 'Ваш номер телефона' %>
+        <div class="row">
+          <div class="col-6">
+            <%= form.number_field :phone, class: 'form-control' %> 
+          </div>  
+        </div>
+      </div>
 
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.number_field :phone %>
-  </div>
+      <div class="form-group">
+        <%= form.label :DescriptionCargo, value: 'Опишите груз' %>
+        <div class="row">
+          <div class="col-6">
+            <%= form.text_area :DescriptionCargo, class: 'form-control', rows: '5' %>
+          </div>  
+        </div>
+      </div>
 
-  <div class="field">
-    <%= form.label :DescriptionCargo %>
-    <%= form.text_area :DescriptionCargo %>
-  </div>
+      <div class="form-group">
+        <%= form.label :PointA, value: 'Адрес отправки' %>
+        <div class="row">
+          <div class="col-6">
+            <%= form.text_field :PointA, class: 'form-control' %>
+          </div>  
+        </div>
+      </div>
 
-  <div class="field">
-    <%= form.label :PointA %>
-    <%= form.text_field :PointA %>
-  </div>
+      <div class="form-group">
+        <%= form.label :PointB, value: 'Адрес доставки' %>
+        <div class="row">
+          <div class="col-6">
+            <%= form.text_field :PointB, class: 'form-control' %>
+          </div>  
+        </div>
+      </div>
 
-  <div class="field">
-    <%= form.label :PointB %>
-    <%= form.text_field :PointB %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+      <div class="form-group">
+        <%= form.submit class: 'btn btn-primary', value: 'Отправить' %>
+        <%= link_to 'Назад', root_path, class: 'btn btn-outline-primary' %>
+      </div>
   </div>
 <% end %>

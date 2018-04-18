@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2018_04_17_133040) do
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "FLName"
-    t.integer "phone"
+    t.string "phone", limit: 100
     t.text "DescriptionCargo"
     t.string "PointA"
     t.string "PointB"
