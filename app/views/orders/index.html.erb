@@ -33,6 +33,7 @@
           <% end %>
         </tbody>
       </table>
+      <%= will_paginate @orders, renderer: 'BootstrapPaginationHelper::LinkRenderer' %>
     </div>
 </div>
 

@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'devise'
+gem 'will_paginate', '~> 3.1.0'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
