@@ -1,29 +1,43 @@
-<p id="notice"><%= notice %></p>
+<div class="container marketing">
+    <div class="row featurette">
+        <p id="notice"><%= notice %></p>
+    </div>
 
-<p>
-  <strong>Flname:</strong>
-  <%= @order.FLName %>
-</p>
+    <div class="row featurette">
+        <p>
+          <strong>Имя:</strong>
+          <%= @order.FLName %>
+        </p>
+    </div>
+    <div class="row featurette">
+        <p>
+          <strong>Телефон:</strong>
+          <%= @order.phone %>
+        </p>
+    </div>
+    <div class="row featurette">
+        <p>
+          <strong>Описание груза:</strong>
+          <%= @order.DescriptionCargo %>
+        </p>
+    </div>
+    <div class="row featurette">
+        <p>
+          <strong>Адрес отправки:</strong>
+          <%= @order.PointA %>
+        </p>
+    </div>
+    <div class="row featurette">
+        <p>
+          <strong>Адрес доставки:</strong>
+          <%= @order.PointB %>
+        </p>
+    </div>
+    <div class="row featurette">
+        <%= link_to 'Назад', orders_path, class: 'btn btn-outline-primary' %>
+    </div>
+</div>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @order.phone %>
-</p>
 
-<p>
-  <strong>Descriptioncargo:</strong>
-  <%= @order.DescriptionCargo %>
-</p>
 
-<p>
-  <strong>Pointa:</strong>
-  <%= @order.PointA %>
-</p>
 
-<p>
-  <strong>Pointb:</strong>
-  <%= @order.PointB %>
-</p>
-
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
