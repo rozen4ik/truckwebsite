@@ -1,0 +1,14 @@
+ru:
+  activerecord:
+    models:
+      order: 'Заказ'
+    attributes:
+      order:
+        FLName: 'Ваше имя'
+        phone: 'Ваш номер телефона'
+        DescriptionCargo: 'Описание груза'
+        PointA: 'Адрес отправки'
+        PointB: 'Адрес доставки'
+    errors:
+      messages:
+        blank: 'не может быть пустым'

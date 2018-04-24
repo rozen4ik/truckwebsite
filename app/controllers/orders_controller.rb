@@ -26,7 +26,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to new_order_path, notice: 'Заказ принят, скоро с вами свяжутся.' }
+        format.html { redirect_to new_order_path, success: 'Заказ принят, скоро с вами свяжутся.' }
       else
         format.html { render :new }
       end
@@ -38,7 +38,7 @@ class OrdersController < ApplicationController
   def destroy
     @order.destroy
     respond_to do |format|
-      format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
+      format.html { redirect_to orders_url, success: 'Заказ успешно удалён.' }
       format.json { head :no_content }
     end
   end
