@@ -24,8 +24,8 @@
             <li class="<%= active_class(root_path) %>">
               <a class="nav-link" href="<%= root_path %>">Главная</a>
             </li>
-            <li class="<%= active_class(contact_index_path) %>">
-              <a class="nav-link" href="<%= contact_index_path %>">Контакты</a>
+            <li class="<%= active_class(contacts_path) %>">
+              <a class="nav-link" href="<%= contacts_path %>">Контакты</a>
             </li>
             <li class="<%= active_class(about_index_path) %>">
               <a class="nav-link" href="<%= about_index_path %>">О нас</a>
@@ -41,17 +41,12 @@
       </nav>
     
     <main role="main">
-      <div class="row">
-        <div class="col-md-12">
-          <% flash.each do |name, message| %>
-            <div class="alert alert-success">
-              <%= message %>
-            </div>
-          <% end %>
-        </div>
-      </div>
+        <% flash.each do |name, message| %>
+          <div class="alert alert-success">
+            <%= message %>
+          </div>
+        <% end %>
     <%= yield %>
-      <!-- FOOTER -->
       <div class="container marketing">
         <hr class="featurette-divider">
       </div>

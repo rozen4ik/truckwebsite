@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<div class="container marketing">
+
+  <br>
+
+  <% if user_signed_in? %>       
+    <div class="row featurette">
+      <%= link_to 'Редактировать страницу', edit_contact_path(1), class: 'btn btn-primary' %>
+    </div>                        
+  <% end %>
+    
+  <div class="row featurette">
+      <h1>Контакты</h1>
+  </div>
+
+  <p><%= @contact.body.html_safe %></p>   
+
+</div>
+
+

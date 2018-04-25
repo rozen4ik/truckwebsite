@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  resources :contacts
   devise_for :users, :controllers => { :registrations => "registrations" }
   resources :orders
-  resources :contact
+  resources :contacts
   resources :about
 
   get 'api/orders/', to: 'api/orders#index'
