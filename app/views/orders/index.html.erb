@@ -14,7 +14,8 @@
             <th>Описание груза</th>
             <th>Адрес отправки</th>
             <th>Адрес доставки</th>
-            <th colspan="2"></th>
+            <th>Статус заказа</th>
+            <th colspan="3"></th>
           </tr>
         </thead>
 
@@ -22,12 +23,14 @@
           <% @orders.each do |order| %>
             <tr>
               <td><%= order.id %></td>
-              <td><%= order.FLName %></td>
+              <td><%= order.fl_name %></td>
               <td><%= order.phone %></td>
-              <td><%= order.DescriptionCargo %></td>
-              <td><%= order.PointA %></td>
-              <td><%= order.PointB %></td>
+              <td><%= order.description_cargo %></td>
+              <td><%= order.point_a %></td>
+              <td><%= order.point_b %></td>
+              <td><%= order.status %></td>
               <td><%= link_to 'Открыть', order %></td>
+              <td><%= link_to 'Изменить статус заказа', edit_order_path(order) %></td>
               <td><%= link_to 'Удалить', order, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
             </tr>
           <% end %>

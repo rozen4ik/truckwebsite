@@ -1,6 +1,6 @@
 class Api::OrdersController < ApplicationController
 
-  before_action :set_order, only: [:show, :destroy]
+  before_action :set_order, only: [:show, :destroy, :edit, :update]
   skip_before_action :verify_authenticity_token
 
   # GET api/orders
@@ -17,6 +17,19 @@ class Api::OrdersController < ApplicationController
   # GET api/orders/new
   def new
     @api_order = Order.new
+  end
+
+  def edit
+  end
+
+  def update
+    respond_to do |format|
+      if @api_order.update(order_params)
+        format.json { render :show, status: :ok, location: @api_order }
+      else
+        format.json { render json: @api_order.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def create
@@ -43,6 +56,6 @@ class Api::OrdersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def order_params
-    params.require(:order).permit(:FLName, :phone, :DescriptionCargo, :PointA, :PointB)
+    params.require(:order).permit(:fl_name, :phone, :description_cargo, :point_a, :point_b, :status)
   end
 end

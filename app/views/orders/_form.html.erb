@@ -14,10 +14,10 @@
   
   <div class="container">
       <div class="form-group">
-        <%= form.label :FLName, value: 'Как вас зовут?'%>
+        <%= form.label :fl_name, value: 'Как вас зовут?'%>
         <div class="row">
           <div class="col-6">
-            <%= form.text_field :FLName, class: 'form-control' %>
+            <%= form.text_field :fl_name, class: 'form-control', placeholder: 'Иванов Иван' %>
           </div>  
         </div>
       </div>
@@ -26,34 +26,34 @@
         <%= form.label :phone, value: 'Ваш номер телефона' %>
         <div class="row">
           <div class="col-6">
-            <%= form.number_field :phone, class: 'form-control' %> 
+            <%= form.number_field :phone, class: 'form-control', placeholder: '89997776655' %> 
           </div>  
         </div>
       </div>
 
       <div class="form-group">
-        <%= form.label :DescriptionCargo, value: 'Опишите груз' %>
+        <%= form.label :description_cargo, value: 'Опишите груз' %>
         <div class="row">
           <div class="col-6">
-            <%= form.text_area :DescriptionCargo, class: 'form-control', rows: '5' %>
+            <%= form.text_area :description_cargo, class: 'form-control', rows: '5', placeholder: 'Опишите что везёте, габариты перевозимых вещей: размер, вес, количество' %>
           </div>  
         </div>
       </div>
 
       <div class="form-group">
-        <%= form.label :PointA, value: 'Адрес отправки' %>
+        <%= form.label :point_a, value: 'Адрес отправки' %>
         <div class="row">
           <div class="col-6">
-            <%= form.text_field :PointA, class: 'form-control' %>
+            <%= form.text_field :point_a, class: 'form-control', placeholder: 'г. Дмитров, ул. Советская, д1, кв1' %>
           </div>  
         </div>
       </div>
 
       <div class="form-group">
-        <%= form.label :PointB, value: 'Адрес доставки' %>
+        <%= form.label :point_b, value: 'Адрес доставки' %>
         <div class="row">
           <div class="col-6">
-            <%= form.text_field :PointB, class: 'form-control' %>
+            <%= form.text_field :point_b, class: 'form-control', placeholder: 'г. Дмитров, мкр. Махалина, д1, кв1' %>
           </div>  
         </div>
       </div>

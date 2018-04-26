@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  FLName: MyString
-  phone: 1
-  DescriptionCargo: MyText
-  PointA: MyString
-  PointB: MyString
+  fl_name: MyString
+  phone: MyString
+  description_cargo: MyText
+  point_a: MyString
+  point_b: MyString
+  status: MyString
 
 two:
-  FLName: MyString
-  phone: 1
-  DescriptionCargo: MyText
-  PointA: MyString
-  PointB: MyString
+  fl_name: MyString
+  phone: MyString
+  description_cargo: MyText
+  point_a: MyString
+  point_b: MyString
+  status: MyString

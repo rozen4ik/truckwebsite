@@ -4,11 +4,12 @@ ru:
       order: 'Заказ'
     attributes:
       order:
-        FLName: 'Ваше имя'
+        fl_name: 'Ваше имя'
         phone: 'Ваш номер телефона'
-        DescriptionCargo: 'Описание груза'
-        PointA: 'Адрес отправки'
-        PointB: 'Адрес доставки'
+        description_cargo: 'Описание груза'
+        point_a: 'Адрес отправки'
+        point_b: 'Адрес доставки'
+        status: 'Статус заказа'
     errors:
       messages:
         blank: 'не может быть пустым'

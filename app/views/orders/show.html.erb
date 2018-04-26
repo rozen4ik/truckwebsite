@@ -6,7 +6,7 @@
     <div class="row featurette">
         <p>
           <strong>Имя:</strong>
-          <%= @order.FLName %>
+          <%= @order.fl_name %>
         </p>
     </div>
     <div class="row featurette">
@@ -18,19 +18,25 @@
     <div class="row featurette">
         <p>
           <strong>Описание груза:</strong>
-          <%= @order.DescriptionCargo %>
+          <%= @order.description_cargo %>
         </p>
     </div>
     <div class="row featurette">
         <p>
           <strong>Адрес отправки:</strong>
-          <%= @order.PointA %>
+          <%= @order.point_a %>
         </p>
     </div>
     <div class="row featurette">
         <p>
           <strong>Адрес доставки:</strong>
-          <%= @order.PointB %>
+          <%= @order.point_b %>
+        </p>
+    </div>
+    <div class="row featurette">
+        <p>
+          <strong>Cтатус заказа:</strong>
+          <%= @order.status %>
         </p>
     </div>
     <div class="row featurette">

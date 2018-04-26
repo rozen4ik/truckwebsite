@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_25_133705) do
+ActiveRecord::Schema.define(version: 2018_04_26_140845) do
 
   create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "body"
@@ -19,11 +19,12 @@ ActiveRecord::Schema.define(version: 2018_04_25_133705) do
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "FLName"
-    t.string "phone", limit: 100
-    t.text "DescriptionCargo"
-    t.string "PointA"
-    t.string "PointB"
+    t.string "fl_name"
+    t.string "phone"
+    t.text "description_cargo"
+    t.string "point_a"
+    t.string "point_b"
+    t.string "status", default: "Ожидает потверждения"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

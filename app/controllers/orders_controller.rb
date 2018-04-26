@@ -14,6 +14,9 @@ class OrdersController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
   # GET /orders/new
   def new
     @order = Order.new
@@ -29,6 +32,16 @@ class OrdersController < ApplicationController
         format.html { redirect_to new_order_path, success: 'Заказ принят, скоро с вами свяжутся.' }
       else
         format.html { render :new }
+      end
+    end
+  end
+
+  def update
+    respond_to do |format|
+      if @order.update(order_params)
+        format.html { redirect_to @order, success: 'Статус заказа был изменён.' }
+      else
+        format.html { render :edit }
       end
     end
   end
@@ -51,6 +64,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:FLName, :phone, :DescriptionCargo, :PointA, :PointB)
+      params.require(:order).permit(:fl_name, :phone, :description_cargo, :point_a, :point_b, :status)
     end
 end
