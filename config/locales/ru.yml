@@ -4,4 +4,4 @@ ru:
 
   will_paginate:
     previous_label: '&larr; Туда'
-    next_label: 'Сюда &larr;'
+    next_label: 'Сюда &rarr;'
