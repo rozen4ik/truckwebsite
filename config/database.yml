@@ -11,12 +11,11 @@
 #
 default: &default
   adapter: mysql2
+  host: localhost
   encoding: utf8
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password: root
-  database: TruckWebSite
-  socket: /var/run/mysqld/mysqld.sock
+  database: 08071977_truck81
 
 development:
   <<: *default

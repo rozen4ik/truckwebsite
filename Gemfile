@@ -32,6 +32,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'will_paginate', '~> 3.1.0'
 gem 'trix'
+gem 'unicorn'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
